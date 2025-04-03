@@ -91,7 +91,7 @@ public class AddTreeTransaction extends EntityBase {
 //        return v;
 //    }
 
-    public void processNewTreeTransaction(Properties p) {
+    public void processNewAddTreeTransaction(Properties p) {
         persistentState = new Properties();
         persistentState.setProperty("SessionID", p.getProperty("SessionID"));
         persistentState.setProperty("CustomerName", p.getProperty("CustomerName"));
