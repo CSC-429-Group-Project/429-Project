@@ -40,7 +40,6 @@ public class Scout extends EntityBase{
         super(table_name);
 
         String query = "SELECT * FROM" + table_name + " WHERE (ID= " + query_id + ")";
-
         Vector<Properties> dataRetrieved = getSelectQueryResult(query);
 
         if (dataRetrieved != null){
@@ -157,7 +156,7 @@ public class Scout extends EntityBase{
             else
             {
                 // insert
-                Integer PatronId =
+                Integer PatronId = //wrong variable?
                         insertAutoIncrementalPersistentState(mySchema, persistentState);
                 persistentState.setProperty("ScoutId", "" + PatronId.intValue());
                 updateStatusMessage = "Scout data for new Scout : " +  persistentState.getProperty("ScoutId")
